@@ -42,11 +42,11 @@ const navigate=useNavigate()
       <h2 className="text-2xl font-bold mb-6 text-gray-800 flex items-center">
    
                     <div onClick={() => navigate("/")} className="cursor-pointer">
-                      <MdKeyboardBackspace className="w-[25px] h-[25px] text-[#ff4d2d]" />
+                      <MdKeyboardBackspace className="w-[25px] h-[25px] text-[#FFC107]" />
                     </div>
                    
         <span className="mr-2">📦</span>
-        <span style={{ color: "#ff4d2d" }}>My Delivered Orders</span>
+        <span style={{ color: "#FFC107" }}>My Delivered Orders</span>
       </h2>
       <div className="grid gap-6">
         {orders.map((order) => (
@@ -73,7 +73,7 @@ const navigate=useNavigate()
                 >
                   <p
                     className="font-semibold text-lg"
-                    style={{ color: "#ff4d2d" }}
+                    style={{ color: "#FFC107" }}
                   >
                     🏪 {so.shop?.name}
                   </p>
@@ -88,7 +88,7 @@ const navigate=useNavigate()
                         </span>
                         <span
                           className="font-semibold"
-                          style={{ color: "#ff4d2d" }}
+                          style={{ color: "#FFC107" }}
                         >
                           ₹{it.price}
                         </span>
@@ -101,7 +101,7 @@ const navigate=useNavigate()
                     </span>
                     <span
                       className="font-bold text-lg"
-                      style={{ color: "#ff4d2d" }}
+                      style={{ color: "#FFC107" }}
                     >
                       Subtotal: ₹{so.subtotal}
                     </span>

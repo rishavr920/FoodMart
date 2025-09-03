@@ -35,7 +35,7 @@ return res.status(201).json({
 export const getItemsByShop=async (req,res)=>{
     try {
         const {shopId}=req.params
-        const items=await Item.find({shop:shopId}).populate("shop")
+        const items=await Item.find({shop:shopId})
         if(!items.length){
            return res.status(400).json({message:"this shop does not have food items"}) 
         }

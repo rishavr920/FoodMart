@@ -15,9 +15,9 @@ export default function SignIn() {
   const [password, setPassword] = useState("");
 
   // Professional Food Delivery Theme
-  const primaryColor = "#ff4d2d"; // rich orange
-  const hoverColor = "#e64323"; // darker orange
-  const bgColor = "#fff9f6"; // light off-white background
+  const primaryColor = "#FFC107";
+  const hoverColor = "#e6b800";
+  const bgColor = "#f9f6ffff"; 
   const borderColor = "#ddd";
 const dispatch=useDispatch()
   const handleSignIn = async () => {
@@ -60,7 +60,7 @@ const dispatch=useDispatch()
       >
         {/* Brand Heading */}
         <h1 className="text-3xl font-bold mb-2" style={{ color: primaryColor }}>
-          Vingo
+          FoodMart
         </h1>
         <p className="text-gray-600 mb-8">
           Welcome back! Please sign in to continue enjoying delicious food
@@ -97,7 +97,7 @@ const dispatch=useDispatch()
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-3 top-2.5 text-gray-500"
+              className="absolute right-3 top-2.5 text-gray-500 cursor-pointer"
             >
               {showPassword ? <FaEyeSlash size={20} /> : <FaEye size={20} />}
             </button>
@@ -117,7 +117,7 @@ const dispatch=useDispatch()
 
         {/* Sign In Button */}
         <button
-          className="w-full font-semibold py-2 rounded-lg transition duration-200"
+          className="w-full font-semibold py-2 rounded-lg transition duration-200 cursor-pointer"
           style={{ backgroundColor: primaryColor, color: "white" }}
           onMouseOver={(e) =>
             (e.currentTarget.style.backgroundColor = hoverColor)
@@ -132,7 +132,7 @@ const dispatch=useDispatch()
 
         {/* Google Auth */}
         <button
-          className="w-full mt-4 flex items-center justify-center gap-2 border rounded-lg px-4 py-2 transition duration-200"
+          className="w-full mt-4 flex items-center cursor-pointer justify-center gap-2 border rounded-lg px-4 py-2 transition duration-200"
           style={{ borderColor: borderColor }}
           onClick={handleGoogleAuth}
         >
@@ -143,7 +143,7 @@ const dispatch=useDispatch()
         </button>
 
         {/* No account yet */}
-        <p className="mt-6 text-center text-gray-600">
+        <p className="mt-6 text-center text-gray-600 cursor-pointer">
           Don’t have an account?{" "}
           <Link
             to="/signup"

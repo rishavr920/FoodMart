@@ -18,13 +18,13 @@ dispatch(setShop(result.data.shop))
         }
     }
   return (
-    <div className="flex bg-white rounded-lg shadow-md overflow-hidden border border-[#ff4d2d] w-full max-w-2xl">
+    <div className="flex bg-white rounded-lg shadow-md overflow-hidden border border-[#FFC107]  w-full max-w-2xl">
       <div className="w-36 h-[full] flex-shrink-0 bg-gray-50">
         <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
       </div>
       <div className="flex flex-col justify-between p-3 flex-1">
         <div>
-          <h3 className="text-base font-semibold text-[#ff4d2d]">{item.name}</h3>
+          <h3 className="text-base font-semibold text-[#FFC107]">{item.name}</h3>
           <p className="text-gray-600 text-sm mt-1 line-clamp-2">{item.description}</p>
           <div className="mt-2 text-xs text-gray-500 space-y-1">
             <p><span className="font-medium text-gray-700">Category:</span> {item.category || 'N/A'}</p>
@@ -39,17 +39,17 @@ dispatch(setShop(result.data.shop))
           </div>
         </div>
         <div className="flex items-center justify-between mt-2">
-          <span className="text-[#ff4d2d] font-bold">₹{item.price}</span>
+          <span className="text-[#FFC107] font-bold">₹{item.price}</span>
           <div className="flex items-center gap-2">
             <button
               onClick={() =>navigate(`/editItem/${item._id}`)}
-              className="p-2 rounded-full hover:bg-[#ff4d2d]/10 text-[#ff4d2d]"
+              className="p-2 rounded-full hover:bg-[#FFC107]/10 text-[#FFC107]"
             >
               <FiEdit size={16} />
             </button>
             <button
              
-              className="p-2 rounded-full hover:bg-[#ff4d2d]/10 text-[#ff4d2d]"
+              className="p-2 rounded-full hover:bg-[#FFC107]/10 text-[#FFC107]"
               onClick={handleDelete}
             >
               <FiTrash2 size={16} />

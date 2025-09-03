@@ -10,7 +10,7 @@ export default function ForgotPassword() {
   const [confirmPassword, setConfirmPassword] = useState("");
 const navigate=useNavigate()
   // Professional Food Delivery Theme
-  const primaryColor = "#ff4d2d"; // rich orange
+  const primaryColor = "#FFC107"; // rich orange
   const hoverColor = "#e64323"; // darker orange
   const bgColor = "#fff9f6"; // light off-white background
   const borderColor = "#ddd";

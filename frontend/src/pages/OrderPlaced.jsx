@@ -16,7 +16,7 @@ export default function OrderPlaced() {
       </p>
       <button
         onClick={() => navigate("/my-orders")}
-        className="bg-[#ff4d2d] hover:bg-[#e64526] text-white px-6 py-3 rounded-lg text-lg font-medium transition"
+        className="bg-[#FFC107] hover:bg-[#F9A825] text-white px-6 py-3 rounded-lg text-lg font-medium transition"
       >
         Back to My Orders
       </button>

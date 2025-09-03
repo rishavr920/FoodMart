@@ -59,7 +59,7 @@ const handleIncrease = () => {
   };
 
   return (
-    <div className="w-[250px] rounded-2xl border-2 border-[#ff4d2d] bg-white shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col">
+    <div className="w-[250px] rounded-2xl border-2 border-[#FFC107]  bg-white shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col">
       {/* Image & top icons */}
       <div className="relative w-full h-[170px] flex justify-center items-center bg-white">
         {/* Veg/Non-Veg Icon */}
@@ -113,7 +113,7 @@ const handleIncrease = () => {
             >
               <FaPlus size={12} />
             </button>
-            <button className={`${cartItems.some(i=>i.id==data._id)?"bg-gray-700":"bg-[#ff4d2d]"} text-white px-3 py-2 transition-colors`} onClick={handleAddToCart}>
+            <button className={`${cartItems.some(i=>i.id==data._id)?"bg-gray-700":"bg-[#FFC107]"} text-white px-3 py-2 transition-colors`} onClick={handleAddToCart}>
               <FaShoppingCart size={14} />
             </button>
           </div>

@@ -111,7 +111,7 @@ export default function CheckoutPage() {
 
   const openRazorpay = (orderId, razorpayOrder) => {
     const options = {
-      key:"rzp_test_R8OFNIx0dn0Ggd", // Razorpay key id from env
+      key:import.meta.env.VITE_RAZORPAY_KEY_ID, // Razorpay key id from env
       amount: razorpayOrder?.amount, // in paise
       currency: "INR",
       name: "Vingo",
@@ -144,7 +144,7 @@ export default function CheckoutPage() {
         contact: userData?.phone
       },
       theme: {
-        color: "#ff4d2d"
+        color: "#FFC107"
       }
     };
 
@@ -156,7 +156,7 @@ export default function CheckoutPage() {
     <div className="min-h-screen bg-[#fff9f6] flex items-center justify-center p-6">
       {/* Back Button */}
       <div className="absolute top-[20px] left-[20px] z-[10]" onClick={() => navigate("/")}>
-        <MdKeyboardBackspace className="w-[25px] h-[25px] text-[#ff4d2d]" />
+        <MdKeyboardBackspace className="w-[25px] h-[25px] text-[#FFC107]" />
       </div>
 
       <div className="w-full max-w-[900px] bg-white rounded-2xl shadow-xl p-6 space-y-6">
@@ -165,7 +165,7 @@ export default function CheckoutPage() {
         {/* Location Section */}
         <section>
           <h2 className="text-lg font-semibold mb-2 flex items-center gap-2 text-gray-800">
-            <FaMapMarkerAlt className="text-[#ff4d2d]" /> Delivery Location
+            <FaMapMarkerAlt className="text-[#FFC107]" /> Delivery Location
           </h2>
 
           {/* Input + Search + Current Location */}
@@ -174,12 +174,12 @@ export default function CheckoutPage() {
               type="text"
               value={searchText}
               onChange={(e) => setSearchText(e.target.value)}
-              className="flex-1 border border-gray-300 rounded-lg p-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#ff4d2d]"
+              className="flex-1 border border-gray-300 rounded-lg p-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#FFC107]"
               placeholder="Enter your delivery address"
             />
             <button
               onClick={() => forwardGeocode(searchText)}
-              className="bg-[#ff4d2d] hover:bg-[#e64526] text-white px-3 py-2 rounded-lg flex items-center justify-center"
+              className="bg-[#FFC107] hover:bg-[#F9A825] text-white px-3 py-2 rounded-lg flex items-center justify-center"
             >
               <FaSearch />
             </button>
@@ -231,7 +231,7 @@ export default function CheckoutPage() {
               type="button"
               onClick={() => setMethod("cod")}
               className={`flex items-center gap-3 rounded-xl border p-4 text-left transition ${
-                method === "cod" ? "border-[#ff4d2d] bg-orange-50 shadow" : "border-gray-200 hover:border-gray-300"
+                method === "cod" ? "border-[#FFC107]  bg-orange-50 shadow" : "border-gray-200 hover:border-gray-300"
               }`}
             >
               <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-green-100">
@@ -248,7 +248,7 @@ export default function CheckoutPage() {
               type="button"
               onClick={() => setMethod("online")}
               className={`flex items-center gap-3 rounded-xl border p-4 text-left transition ${
-                method === "online" ? "border-[#ff4d2d] bg-orange-50 shadow" : "border-gray-200 hover:border-gray-300"
+                method === "online" ? "border-[#FFC107]  bg-orange-50 shadow" : "border-gray-200 hover:border-gray-300"
               }`}
             >
               <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-purple-100">
@@ -286,7 +286,7 @@ export default function CheckoutPage() {
               <span>Delivery Fee</span>
               <span>{deliveryFee === 0 ? "Free" : `₹${deliveryFee}`}</span>
             </div>
-            <div className="flex justify-between text-lg font-bold text-[#ff4d2d] pt-2">
+            <div className="flex justify-between text-lg font-bold text-[#FFC107] pt-2">
               <span>Total</span>
               <span>₹{total.toFixed(2)}</span>
             </div>
@@ -294,7 +294,7 @@ export default function CheckoutPage() {
         </section>
 
             <button
-          className="w-full bg-[#ff4d2d] hover:bg-[#e64526] text-white py-3 rounded-xl font-semibold"
+          className="w-full bg-[#FFC107] hover:bg-[#F9A825] text-white py-3 rounded-xl font-semibold"
           onClick={handlePlaceOrder}
         >
           {method === "cod" ? "Place Order" : "Pay & Place Order"}

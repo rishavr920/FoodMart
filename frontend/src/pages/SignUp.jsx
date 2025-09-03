@@ -17,8 +17,8 @@ export default function SignUp() {
   const [mobile, setMobile] = useState("");
   const [password, setPassword] = useState("");
 
-  const primaryColor = "#ff4d2d";
-  const hoverColor = "#e64323";
+  const primaryColor = "#FFC107";
+  const hoverColor = "#e6b800";
   const bgColor = "#fff9f6";
   const borderColor = "#ddd";
 
@@ -79,7 +79,7 @@ export default function SignUp() {
         style={{ border: `1px solid ${borderColor}` }}
       >
         <h1 className="text-3xl font-bold mb-2" style={{ color: primaryColor }}>
-          Vingo
+          FoodMart
         </h1>
         <p className="text-gray-600 mb-8">
           Create your account to get started with delicious food deliveries
@@ -154,14 +154,14 @@ export default function SignUp() {
 
         {/* Role Selection */}
         <div className="mb-4">
-          <label className="block text-gray-700 font-medium mb-1">Role</label>
+          <label className="block text-gray-700 font-medium mb-1 ">Role</label>
           <div className="flex gap-2">
             {["user", "owner", "deliveryBoy"].map((r) => (
               <button
                 key={r}
                 type="button"
                 onClick={() => setRole(r)}
-                className="flex-1 border rounded-lg px-3 py-2 text-center font-medium transition-colors"
+                className="flex-1 border rounded-lg px-3 py-2 text-center font-medium transition-colors cursor-pointer"
                 style={
                   role === r
                     ? { backgroundColor: primaryColor, color: "white" }
@@ -176,7 +176,7 @@ export default function SignUp() {
 
         {/* Sign Up Button */}
         <button
-          className="w-full font-semibold py-2 rounded-lg transition duration-200"
+          className="w-full font-semibold py-2 rounded-lg transition duration-200 cursor-pointer"
           style={{ backgroundColor: primaryColor, color: "white" }}
           onMouseOver={(e) =>
             (e.currentTarget.style.backgroundColor = hoverColor)
@@ -191,7 +191,7 @@ export default function SignUp() {
 
         {/* Google Auth */}
         <button
-          className="w-full mt-4 flex items-center justify-center gap-2 border rounded-lg px-4 py-2 transition duration-200"
+          className="w-full mt-4 flex items-center justify-center gap-2 border rounded-lg px-4 py-2 transition duration-200 cursor-pointer"
           style={{ borderColor }}
           onClick={handleGoogleAuth}
         >

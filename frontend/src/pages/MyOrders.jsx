@@ -70,7 +70,7 @@ export default function MyOrders() {
         <p className="text-gray-600 mb-4">You have no orders yet.</p>
         <button
           onClick={() => navigate("/")}
-          className="bg-[#ff4d2d] hover:bg-[#e64526] text-white px-6 py-2 rounded-lg"
+          className="bg-[#FFC107] hover:bg-[#F9A825] text-white px-6 py-2 rounded-lg"
         >
           Start Shopping
         </button>
@@ -84,7 +84,7 @@ export default function MyOrders() {
         {/* Header */}
         <div className="flex gap-[20px] items-center mb-6">
           <div onClick={() => navigate("/")} className="cursor-pointer">
-            <MdKeyboardBackspace className="w-[25px] h-[25px] text-[#ff4d2d]" />
+            <MdKeyboardBackspace className="w-[25px] h-[25px] text-[#FFC107]" />
           </div>
           <h1 className="text-2xl font-bold">My Orders</h1>
         </div>
@@ -174,7 +174,7 @@ export default function MyOrders() {
                 ) : (
                   <button
                     onClick={() => navigate(`/track-order/${order._id}`)}
-                    className="bg-[#ff4d2d] hover:bg-[#e64526] text-white px-4 py-2 rounded-lg text-sm"
+                    className="bg-[#FFC107] hover:bg-[#F9A825] text-white px-4 py-2 rounded-lg text-sm"
                   >
                     Track Order
                   </button>

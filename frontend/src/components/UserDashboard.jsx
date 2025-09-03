@@ -100,14 +100,14 @@ function UserDashboard() {
           {showCateLeft && (
             <button
               onClick={() => scrollHandler(cateScrollRef, 'left')}
-              className="absolute left-0 top-1/2 -translate-y-1/2 bg-[#ff4d2d] text-white p-2 rounded-full shadow-lg hover:bg-[#e64528] z-10"
+              className="absolute left-0 top-1/2 -translate-y-1/2 bg-[#FFC107] text-white p-2 rounded-full shadow-lg hover:bg-[#e64528] z-10"
             >
               <FaChevronLeft />
             </button>
           )}
           <div
             ref={cateScrollRef}
-            className="w-full flex overflow-x-auto gap-4 pb-2 scrollbar-thin scrollbar-thumb-[#ff4d2d] scrollbar-track-transparent scroll-smooth"
+            className="w-full flex overflow-x-auto gap-4 pb-2 scrollbar-thin scrollbar-thumb-[#FFC107] scrollbar-track-transparent scroll-smooth"
           >
             {categories?.map((cate, index) => (
               <CategoryCard
@@ -121,7 +121,7 @@ function UserDashboard() {
           {showCateRight && (
             <button
               onClick={() => scrollHandler(cateScrollRef, 'right')}
-              className="absolute right-0 top-1/2 -translate-y-1/2 bg-[#ff4d2d] text-white p-2 rounded-full shadow-lg hover:bg-[#e64528] z-10"
+              className="absolute right-0 top-1/2 -translate-y-1/2 bg-[#FFC107] text-white p-2 rounded-full shadow-lg hover:bg-[#e64528] z-10"
             >
               <FaChevronRight />
             </button>
@@ -138,14 +138,14 @@ function UserDashboard() {
           {showShopLeft && (
             <button
               onClick={() => scrollHandler(shopScrollRef, 'left')}
-              className="absolute left-0 top-1/2 -translate-y-1/2 bg-[#ff4d2d] text-white p-2 rounded-full shadow-lg hover:bg-[#e64528] z-10"
+              className="absolute left-0 top-1/2 -translate-y-1/2 bg-[#FFC107] text-white p-2 rounded-full shadow-lg hover:bg-[#e64528] z-10"
             >
               <FaChevronLeft />
             </button>
           )}
           <div
             ref={shopScrollRef}
-            className="w-full flex overflow-x-auto gap-4 pb-2 scrollbar-thin scrollbar-thumb-[#ff4d2d] scrollbar-track-transparent scroll-smooth"
+            className="w-full flex overflow-x-auto gap-4 pb-2 scrollbar-thin scrollbar-thumb-[#FFC107] scrollbar-track-transparent scroll-smooth"
           >
             {shopsOfCity?.map((shop, index) => (
               <CategoryCard
@@ -159,7 +159,7 @@ function UserDashboard() {
           {showShopRight && (
             <button
               onClick={() => scrollHandler(shopScrollRef, 'right')}
-              className="absolute right-0 top-1/2 -translate-y-1/2 bg-[#ff4d2d] text-white p-2 rounded-full shadow-lg hover:bg-[#e64528] z-10"
+              className="absolute right-0 top-1/2 -translate-y-1/2 bg-[#FFC107] text-white p-2 rounded-full shadow-lg hover:bg-[#e64528] z-10"
             >
               <FaChevronRight />
             </button>

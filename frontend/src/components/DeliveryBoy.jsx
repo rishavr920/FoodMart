@@ -15,7 +15,7 @@ import {
   CartesianGrid,
 } from "recharts";
 
-const PRIMARY = "#ff4d2d";
+const PRIMARY = "#1972f6ff";
 
 export default function DeliveryBoy() {
   const [location, setLocation] = useState({ lat: null, lng: null });
@@ -250,7 +250,7 @@ export default function DeliveryBoy() {
                   className="w-full border px-3 py-2 rounded-lg mb-3 focus:outline-none focus:ring-2 focus:ring-orange-400"
                 />
                 <button
-                  className="w-full bg-orange-500 text-white py-2 rounded-lg font-semibold hover:bg-orange-600 transition-all"
+                  className="w-full bg-orange-500 text-white py-2 rounded-lg font-semibold hover:bg-yellow-500 transition-all"
                   onClick={verifyOtp}
                 >
                   Submit OTP
@@ -281,7 +281,7 @@ export default function DeliveryBoy() {
                       </p>
                     </div>
                     <button
-                      className="bg-orange-500 text-white px-4 py-1 rounded-lg text-sm hover:bg-orange-600"
+                      className="bg-orange-500 text-white px-4 py-1 rounded-lg text-sm hover:bg-yellow-500"
                       onClick={() => acceptOrder(order.assignmentId)}
                     >
                       Accept

@@ -63,11 +63,11 @@ navigate("/")
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-[#fff0ec] to-white p-6">
           <div className='absolute top-[20px] left-[20px] z-[10] mb-[10px]' onClick={()=>navigate("/")}>
-                        <MdKeyboardBackspace className='w-[25px] h-[25px] text-[#ff4d2d]'/>
+                        <MdKeyboardBackspace className='w-[25px] h-[25px] text-[#FFC107]'/>
                        </div>
       <form
         onSubmit={handleSubmit}
-        className="bg-white border border-[#ff4d2d33] shadow-lg rounded-xl p-8 max-w-lg w-full space-y-6"
+        className="bg-white border border-[#FFC10733] shadow-lg rounded-xl p-8 max-w-lg w-full space-y-6"
       >
         <h2 className="text-2xl font-bold text-gray-800 text-center mb-4">
           Add New Food Item
@@ -82,7 +82,7 @@ navigate("/")
             placeholder="Enter Food Name"
             onChange={(e)=>setName(e.target.value)}
             required
-            className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#ff4d2d] focus:outline-none"
+            className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#FFC107] focus:outline-none"
           />
         </div>
 
@@ -95,7 +95,7 @@ navigate("/")
             onChange={(e)=>setPrice(e.target.value)}
             required
             min="0"
-            className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#ff4d2d] focus:outline-none"
+            className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#FFC107] focus:outline-none"
           />
         </div>
 
@@ -106,7 +106,7 @@ navigate("/")
              value={category}
             onChange={(e)=>setCategory(e.target.value)}
             required
-            className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#ff4d2d] focus:outline-none"
+            className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#FFC107] focus:outline-none"
           >
             <option value="">Select Category</option>
             {categories.map((cat) => (
@@ -124,7 +124,7 @@ navigate("/")
             name="image"
             accept="image/*"
            onChange={handleImage}
-            className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#ff4d2d] focus:outline-none"
+            className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#FFC107] focus:outline-none"
           />
           {frontendImage && (
             <img
@@ -142,7 +142,7 @@ navigate("/")
             value={type}
             onChange={(e)=>setType(e.target.value)}
             required
-            className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#ff4d2d] focus:outline-none"
+            className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#FFC107] focus:outline-none"
           >
             <option value="veg">veg</option>
             <option value="non veg">non veg</option>
@@ -151,7 +151,7 @@ navigate("/")
 
         <button
           type="submit"
-          className="w-full flex items-center justify-center gap-2 bg-[#ff4d2d] text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-[#e64528] transition-colors"
+          className="w-full flex items-center justify-center gap-2 bg-[#FFC107] text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-[#e64528] transition-colors"
         >
           <FaPlus /> Add Item
         </button>

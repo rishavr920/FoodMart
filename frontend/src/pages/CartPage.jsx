@@ -29,7 +29,7 @@ function CartPage() {
       <div className="w-full max-w-[800px]">
         <div className="flex items-center gap-[20px] mb-6">
          <div className='' onClick={()=>navigate("/")}>
-                                <MdKeyboardBackspace className='w-[25px] h-[25px] text-[#ff4d2d]'/>
+                                <MdKeyboardBackspace className='w-[25px] h-[25px] text-[#FFC107]'/>
                                </div>
         <h1 className="text-2xl font-bold  text-start">Your Cart</h1>
 </div>
@@ -90,13 +90,13 @@ function CartPage() {
             {/* Total & Checkout */}
             <div className="mt-6 bg-white p-4 rounded-xl shadow flex justify-between items-center border">
               <h3 className="text-lg font-semibold">Total Amount</h3>
-              <span className="text-xl font-bold text-[#ff4d2d]">
+              <span className="text-xl font-bold text-[#FFC107]">
                 ₹{totalAmount.toFixed(2)}
               </span>
             </div>
 
             <div className="mt-4 flex justify-end">
-              <button className="bg-[#ff4d2d] text-white px-6 py-3 rounded-lg text-lg font-medium hover:bg-[#e64526] transition" onClick={()=>navigate("/checkout")}>
+              <button className="bg-[#FFC107] text-white px-6 py-3 rounded-lg text-lg font-medium hover:bg-[#F9A825] transition" onClick={()=>navigate("/checkout")}>
                 Proceed to Checkout
               </button>
             </div>

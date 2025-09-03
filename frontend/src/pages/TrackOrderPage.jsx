@@ -4,7 +4,7 @@ import axios from "axios";
 import { serverUrl } from "../App";
 import UserDeliveryTracking from "../components/userDeliveryTracking";
 import { MdKeyboardBackspace } from "react-icons/md";
-const PRIMARY = "#ff4d2d";
+const PRIMARY = "#FFC107";
 
 export default function TrackOrderPage() {
   const { orderId } = useParams();
@@ -35,7 +35,7 @@ const navigate=useNavigate()
     <div className="max-w-4xl mx-auto p-4 flex flex-col gap-6">
       <div className="flex gap-[20px] items-center mb-6 md:justify-center">
                   <div onClick={() => navigate("/")} className="cursor-pointer">
-                    <MdKeyboardBackspace className="w-[25px] h-[25px] text-[#ff4d2d]" />
+                    <MdKeyboardBackspace className="w-[25px] h-[25px] text-[#FFC107]" />
                   </div>
                   <h1 className="text-2xl font-bold md:text-center">Track Order</h1>
                 </div>
