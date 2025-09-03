@@ -30,7 +30,7 @@ function Recenter({ lat, lng }) {
   return null;
 }
 
-export default function CheckoutPage() {
+export default function CheckOutPage() {
   const { cartItems,userData } = useSelector((s) => s.user);
   const { location, address, loading, error, getCurrentLocation, setLocation, reverseGeocode } =
     useCurrentLocation();
