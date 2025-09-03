@@ -14,38 +14,49 @@ import socketHandler from "./socket.js";
 
 dotenv.config();
 
-const PORT = process.env.PORT || 5000;
-const FRONTEND_URL = process.env.FRONTEND_URL || "http://localhost:5173";
+const PORT = process.env.PORT || 8000;
+
+// allow both prod + local frontend
+const allowedOrigins = [
+  process.env.FRONTEND_URL,    // vercel frontend
+  "http://localhost:5173"      // local dev
+];
 
 const app = express();
 const server = http.createServer(app);
 
+// socket.io
 const io = new Server(server, {
   cors: {
-    origin: FRONTEND_URL,
-    methods: ["GET", "POST"],
+    origin: allowedOrigins,
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   },
 });
 app.set("io", io);
 
+// middlewares
 app.use(cors({
-  origin: FRONTEND_URL,
+  origin: allowedOrigins,
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 }));
 
 app.use(express.json());
 app.use(cookieParser());
 
+// routes
 app.use("/api/auth", authRouter);
 app.use("/api/user", userRouter);
 app.use("/api/shop", shopRouter);
 app.use("/api/item", itemRouter);
 app.use("/api/order", orderRouter);
 
+// socket handler
 socketHandler(io);
 
+// start
 server.listen(PORT, () => {
-  console.log(`Server started at ${PORT}`);
+  console.log(`🚀 Server started at ${PORT}`);
   connectDb();
 });
