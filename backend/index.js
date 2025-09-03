@@ -18,27 +18,16 @@ const PORT = process.env.PORT || 8000;
 
 // ✅ Allowed origins (prod + local)
 const allowedOrigins = [
-  process.env.FRONTEND_URL,   // e.g. https://your-frontend.vercel.app
-  "http://localhost:5173"     // local Vite dev
-].filter(Boolean); // remove undefined/null
+  process.env.FRONTEND_URL,   // https://food-mart-sigma.vercel.app
+  "http://localhost:5173"     // local dev (vite)
+].filter(Boolean);
 
 const app = express();
 const server = http.createServer(app);
 
-// ✅ Socket.IO setup with CORS
-const io = new Server(server, {
-  cors: {
-    origin: allowedOrigins,
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-  },
-});
-app.set("io", io);
-
-// ✅ Middlewares
+// ✅ CORS for Express APIs
 app.use(cors({
   origin: (origin, callback) => {
-    // allow requests with no origin (like mobile apps or curl)
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
@@ -58,6 +47,22 @@ app.use("/api/user", userRouter);
 app.use("/api/shop", shopRouter);
 app.use("/api/item", itemRouter);
 app.use("/api/order", orderRouter);
+
+// ✅ Socket.IO setup with CORS
+const io = new Server(server, {
+  cors: {
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  },
+});
+app.set("io", io);
 
 // ✅ Socket handler
 socketHandler(io);
